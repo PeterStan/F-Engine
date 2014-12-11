@@ -14,6 +14,35 @@ public class BrainFuckEngine {
 	 * @return runs BrainFuck
 	 */
 	public static String runBF(int cells, String p){
+		int[] cell = new int[cells];
+		int pointer = 0;
+		for(int l = 0; l < p.length()-1; l++){ 
+			switch(p.charAt(l)){
+				case FuckCommands.NEXT.getBF():
+					break;
+				case FuckCommands.PREVIOUS.getBF():
+					break;
+				case FuckCommands.PLUS.getBF():
+					break;
+				case FuckCommands.MINUS.getBF():
+					break;
+				case FuckCommands.OUTPUT.getBF():
+					break;
+				case FuckCommands.INPUT.getBF():
+					break;
+				case FuckCommands.OUTPUT.getBF():
+					break;
+				case FuckCommands.LEFT.getBF():
+					break;
+				case FuckCommands.RIGHT.getBF():
+					break;
+				default:
+					break;
+			}
+			
+		}
+		
+		
 		
 		
 		return p;
@@ -33,6 +62,7 @@ public class BrainFuckEngine {
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		runBF(3,"...");
 
 	}
 
