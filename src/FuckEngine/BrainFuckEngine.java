@@ -1,5 +1,9 @@
 package FuckEngine;
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.Scanner;
 
 /**
  * @author Peter
@@ -14,46 +18,67 @@ public class BrainFuckEngine {
 	 * @return runs BrainFuck
 	 */
 	public static String runBF(int cells, String p){
-		int[] cell = new int[cells];
-		int pointer = 0;
-		for(int l = 0; l < p.length()-1; l++){ 
+		byte[] array = new byte[cells];
+		int pointer = 0; String print = "";
+		Scanner scan = new Scanner(System.in);
+		
+		for(int l = 0; l < p.length(); l++){ 
 			switch(p.charAt(l)){
-				case FuckCommands.NEXT.getBF():
+				case '>':
+						pointer++;
 					break;
-				case FuckCommands.PREVIOUS.getBF():
+				case '<':
+						pointer--;
 					break;
-				case FuckCommands.PLUS.getBF():
+				case '+':
+						array[pointer]++;
 					break;
-				case FuckCommands.MINUS.getBF():
+				case '-':
+						array[pointer]--;
 					break;
-				case FuckCommands.OUTPUT.getBF():
+				case '.':
+						print += (char)(array[pointer]);
 					break;
-				case FuckCommands.INPUT.getBF():
+				case ',':
+						array[pointer] = (byte) scan.next().charAt(0);
 					break;
-				case FuckCommands.OUTPUT.getBF():
+				case '[':
 					break;
-				case FuckCommands.LEFT.getBF():
-					break;
-				case FuckCommands.RIGHT.getBF():
+				case ']':
 					break;
 				default:
 					break;
 			}
-			
 		}
 		
 		
 		
-		
-		return p;
+		return print;
 	}
 	
 	
 	/**
 	 * converts BrainFuck program to VerboseFuck 
 	 * @param BrainFuck program
+	 * @throws IOException 
 	 */
-	public static void toVF(File f){
+	public static void toVF(File f) throws IOException{
+		BufferedReader in = new BufferedReader(new FileReader(f.getPath())); 
+		String text = null;
+		while (in.ready()) { 
+			  text += in.readLine(); 
+			  System.out.println(text); 
+			}
+		in.close();
+		
+		toVF(text);
+	}
+	
+	/**
+	 * converts BrainFuck program to VerboseFuck
+	 * @param BrainFuck Program
+	 */
+	public static void toVF(String s){
 		
 	}
 
@@ -62,7 +87,8 @@ public class BrainFuckEngine {
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		runBF(3,"...");
+		System.out.println("run:" + runBF(3,",."));
+		System.out.print("Done");
 
 	}
 
