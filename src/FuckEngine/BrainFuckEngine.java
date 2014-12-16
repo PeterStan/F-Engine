@@ -72,7 +72,11 @@ public class BrainFuckEngine {
 		return print;
 	}
 	
-
+	/**
+	 * 
+	 * @param BrainFuck program
+	 * @return
+	 */
 	public static String runBF(String p){
 		return runBF(100,p);
 	}
