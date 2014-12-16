@@ -61,11 +61,6 @@ public class BrainFuckEngine {
 				}
 				else
 					program_pointer = loop_program_position.peek();
-				
-					
-					
-					
-					
 				break;
 			default:
 				break;
@@ -77,6 +72,10 @@ public class BrainFuckEngine {
 		return print;
 	}
 	
+
+	public static String runBF(String p){
+		return runBF(100,p);
+	}
 	
 	/**
 	 * converts BrainFuck program to VerboseFuck 
