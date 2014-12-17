@@ -1,10 +1,6 @@
 package FuckEngine;
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
-import java.io.IOException;
-import java.util.Scanner;
-import java.util.Stack;
+import java.io.*;
+import java.util.*;
 
 /**
  * @author Peter
@@ -22,7 +18,6 @@ public class BrainFuckEngine {
 		byte[] array = new byte[cells];	int array_pointer = 0; 
 		String print = "";
 		Stack<Integer> loop_program_position = new Stack<>(); Stack<Integer> loop_array_position = new Stack<>();
-		
 		
 		for(int program_pointer = 0; program_pointer < program.length(); program_pointer++){
 			//System.out.print("("+ array_pointer + ")"+ array[array_pointer]+ "," + program.charAt(program_pointer)+ "   ");
@@ -51,8 +46,7 @@ public class BrainFuckEngine {
 			case '[':
 					loop_program_position.push(new Integer(program_pointer++));
 					loop_array_position.push(new Integer(array_pointer));
-					program_pointer--;
-									
+					program_pointer--;			
 				break;
 			case ']':
 				if(array[loop_array_position.peek()] == 0){
@@ -66,19 +60,35 @@ public class BrainFuckEngine {
 				break;
 			}
 			//System.out.println();
-			
 		}
-		
 		return print;
 	}
 	
 	/**
 	 * 
 	 * @param BrainFuck program
-	 * @return
+	 * @return interprets BF
 	 */
 	public static String runBF(String p){
 		return runBF(100,p);
+	}
+	
+	/**
+	 * 
+	 * @param file containing BrainFuck
+	 * @return Interprets BF
+	 * @throws IOException 
+	 */
+	public static String runBF(File f) throws IOException{
+		BufferedReader in = new BufferedReader(new FileReader(f.getPath())); 
+		String prog= null;
+		while (in.ready()) { 
+			  prog += in.readLine(); 
+			}
+		in.close();
+		
+		return runBF(prog);
+		
 	}
 	
 	/**
@@ -86,8 +96,8 @@ public class BrainFuckEngine {
 	 * @param BrainFuck program
 	 * @throws IOException 
 	 */
-	public static void toVF(File f) throws IOException{
-		BufferedReader in = new BufferedReader(new FileReader(f.getPath())); 
+	public static void toVF(File reader, File writer) throws IOException{
+		BufferedReader in = new BufferedReader(new FileReader(reader.getPath())); 
 		String text = null;
 		while (in.ready()) { 
 			  text += in.readLine(); 
@@ -95,24 +105,40 @@ public class BrainFuckEngine {
 			}
 		in.close();
 		
-		toVF(text);
+		toVF(text, writer);
+	}
+	
+	/**
+	 * converts BrainFuck program to VerboseFuck
+	 * @param BrainFuck Program
+	 * @throws IOException 
+	 */
+	public static void toVF(String s, File writer) throws IOException{
+		PrintWriter outt = new PrintWriter(new FileWriter(writer.getAbsolutePath()));
+		outt.print(toVF(s));
+		outt.close();
+
+		
+		
 	}
 	
 	/**
 	 * converts BrainFuck program to VerboseFuck
 	 * @param BrainFuck Program
 	 */
-	public static void toVF(String s){
+	public static String toVF(String s){
+		//TODO complete converter
+		return s;
 		
 	}
 
 	/**
 	 * @param args
+	 * @throws IOException 
 	 */
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
 		// TODO Auto-generated method stub
-		
-		System.out.println("run:" + runBF(100," ++++++++++[>+++++++>++++++++++>+++>+<<<<-]>++.>+.+++++++..+++.>++.<<+++++++++++++++.>.+++.------.--------.>+.>."));
+		System.out.println("run:" + runBF(new File(System.getProperty("user.dir") + "\\TestFuck\\HelloWorld.bf")));
 		System.out.print("Done");
 
 	}

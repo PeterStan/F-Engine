@@ -2,7 +2,9 @@ package FuckEngine;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
+import java.io.PrintWriter;
 
 /**
  * @author Peter
@@ -25,12 +27,24 @@ public class VerboseFuckEngine {
 	 * @param VerboseFuck program
 	 */
 	public static String toBF(String s){
-		
+		//TODO complete converter
 		
 		
 		
 		
 		return s;
+	}
+	
+
+	/**
+	 * 
+	 * @param VerboseFuck program
+	 * @param file to be written to
+	 * @throws IOException 
+	 */
+	public static void toBF(String s, File f) throws IOException{
+		PrintWriter printer = new PrintWriter(new FileWriter(f.getAbsolutePath()));
+		printer.print(toBF(s));
 	}
 	
 	/**
