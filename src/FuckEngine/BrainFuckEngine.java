@@ -127,8 +127,72 @@ public class BrainFuckEngine {
 	 * @param BrainFuck Program
 	 */
 	public static String toVF(String s){
+		String ver = new String();
+		int lastCharCheck = 0;
+		
+		ver += VerboseFuckCommands.MANDITORY_COMMENT + "\n" + VerboseFuckCommands.BEGIN + "\n";
+		System.out.println(ver.length());
+		for(int i = 0; i < s.length(); i++){
+			//System.out.println(s.length());
+			//System.out.println(i + ", " + s.charAt(i));
+			
+			System.out.print( "\n("+lastCharCheck + "," + i +  ") " + ver.substring(lastCharCheck).length() + "");
+			System.out.println();
+			
+			if(ver.substring(lastCharCheck).length() >= 250){
+				ver += VerboseFuckCommands.MANDITORY_COMMENT + "\n";
+				lastCharCheck += ver.substring(lastCharCheck).length();
+				//i--;
+			}
+			else{
+				
+			}
+			
+			
+			
+			if(s.charAt(i) == '>'){
+				ver += VerboseFuckCommands.NEXT + "\n";
+				//ver += ">>>\n";
+			}
+			else if(s.charAt(i) == '<'){
+				ver += VerboseFuckCommands.PREVIOUS + "\n";
+				//ver += "<<<\n";
+			}
+			else if(s.charAt(i) == '+'){
+				ver += VerboseFuckCommands.PLUS + "\n";
+				//ver += "+++\n";
+			}
+			else if(s.charAt(i) == '-'){
+				ver += VerboseFuckCommands.MINUS + "\n";
+				//ver += "---\n";
+			}
+			else if(s.charAt(i) == ','){
+				ver += VerboseFuckCommands.INPUT + "\n";
+				//ver += ",,,\n";
+			}
+			else if(s.charAt(i) == '.'){
+				ver += VerboseFuckCommands.OUTPUT + "\n";
+				//ver += "...\n";
+			}
+			else if(s.charAt(i) == '['){
+				ver += VerboseFuckCommands.LEFT + "\n";
+				//ver += "[[[\n";
+			}
+			else if(s.charAt(i) == ']'){
+				ver += VerboseFuckCommands.RIGHT + "\n";
+				//ver += "]]]\n";
+			}
+			else{
+				
+			}
+			
+		}
+		ver += VerboseFuckCommands.END;
+		
+		
+		
 		//TODO complete converter
-		return s;
+		return ver;
 		
 	}
 
@@ -138,8 +202,12 @@ public class BrainFuckEngine {
 	 */
 	public static void main(String[] args) throws IOException {
 		// TODO Auto-generated method stub
-		System.out.println("run:" + runBF(new File(System.getProperty("user.dir") + "\\TestFuck\\HelloWorld.bf")));
-		System.out.print("Done");
+		File bf = new File(System.getProperty("user.dir") + "\\TestFuck\\HelloWorld.bf");
+		File vf = new File(System.getProperty("user.dir") + "\\TestFuck\\VerboseFuckTest.vf");
+		System.out.println("run:" + runBF(bf));
+		toVF(bf,vf);
+		System.out.println("Done");
+		System.out.println(VerboseFuckCommands.BEGIN.length());
 
 	}
 

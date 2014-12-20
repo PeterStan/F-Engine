@@ -27,6 +27,10 @@ public class VerboseFuckEngine {
 	 * @param VerboseFuck program
 	 */
 	public static String toBF(String s){
+		
+		
+		
+		
 		//TODO complete converter
 		
 		
@@ -45,6 +49,7 @@ public class VerboseFuckEngine {
 	public static void toBF(String s, File f) throws IOException{
 		PrintWriter printer = new PrintWriter(new FileWriter(f.getAbsolutePath()));
 		printer.print(toBF(s));
+		printer.close();
 	}
 	
 	/**

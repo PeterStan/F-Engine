@@ -32,6 +32,7 @@ public class VerboseFuckCommands {
 			+ "program.terminate();";
 	final static String COMMENT_START = " ~!comment!~";
 	final static String COMMENT_END = "~!uncomment!~";
+	final static String MANDITORY_COMMENT = "~!comment!~MANDITORY~!uncomment!~";
 	
 	
 	
