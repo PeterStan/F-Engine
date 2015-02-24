@@ -14,29 +14,10 @@ math.equation(deref(pointer) = (deref(pointer) + byte(1)):binaryand:byte(255));
 math.equation(deref(pointer) = (deref(pointer) + byte(1)):binaryand:byte(255));
 ~!comment!~MANDITORY~!uncomment!~
 math.equation(deref(pointer) = (deref(pointer) + byte(1)):binaryand:byte(255));
-math.equation(deref(pointer) = (deref(pointer) + byte(1)):binaryand:byte(255));
-math.equation(deref(pointer) = (deref(pointer) + byte(1)):binaryand:byte(255));
-math.equation(deref(pointer) = (deref(pointer) + byte(1)):binaryand:byte(255));
-~!comment!~MANDITORY~!uncomment!~
-math.equation(deref(pointer) = (deref(pointer) + byte(1)):binaryand:byte(255));
-math.equation(deref(pointer) = (deref(pointer) + byte(1)):binaryand:byte(255));
 define(defines.label, defines.label.createnew());
 conditional(block.if, boolean.inequality(deref(pointer), byte(0))) {
-~!comment!~MANDITORY~!uncomment!~
 math.equation(pointer = pointer + void(1));
 math.equation(deref(pointer) = (deref(pointer) + byte(1)):binaryand:byte(255));
-math.equation(deref(pointer) = (deref(pointer) + byte(1)):binaryand:byte(255));
-math.equation(deref(pointer) = (deref(pointer) + byte(1)):binaryand:byte(255));
-~!comment!~MANDITORY~!uncomment!~
-math.equation(deref(pointer) = (deref(pointer) + byte(1)):binaryand:byte(255));
-math.equation(deref(pointer) = (deref(pointer) + byte(1)):binaryand:byte(255));
-math.equation(deref(pointer) = (deref(pointer) + byte(1)):binaryand:byte(255));
-math.equation(deref(pointer) = (deref(pointer) + byte(1)):binaryand:byte(255));
-~!comment!~MANDITORY~!uncomment!~
-math.equation(pointer = pointer + void(1));
-math.equation(deref(pointer) = (deref(pointer) + byte(1)):binaryand:byte(255));
-math.equation(deref(pointer) = (deref(pointer) + byte(1)):binaryand:byte(255));
-math.equation(deref(pointer) = (deref(pointer) + byte(1)):binaryand:byte(255));
 ~!comment!~MANDITORY~!uncomment!~
 math.equation(deref(pointer) = (deref(pointer) + byte(1)):binaryand:byte(255));
 math.equation(deref(pointer) = (deref(pointer) + byte(1)):binaryand:byte(255));
@@ -46,109 +27,15 @@ math.equation(deref(pointer) = (deref(pointer) + byte(1)):binaryand:byte(255));
 math.equation(deref(pointer) = (deref(pointer) + byte(1)):binaryand:byte(255));
 math.equation(deref(pointer) = (deref(pointer) + byte(1)):binaryand:byte(255));
 math.equation(deref(pointer) = (deref(pointer) + byte(1)):binaryand:byte(255));
-math.equation(pointer = pointer + void(1));
-~!comment!~MANDITORY~!uncomment!~
 math.equation(deref(pointer) = (deref(pointer) + byte(1)):binaryand:byte(255));
-math.equation(deref(pointer) = (deref(pointer) + byte(1)):binaryand:byte(255));
-math.equation(deref(pointer) = (deref(pointer) + byte(1)):binaryand:byte(255));
-math.equation(pointer = pointer + void(1));
 ~!comment!~MANDITORY~!uncomment!~
 math.equation(deref(pointer) = (deref(pointer) + byte(1)):binaryand:byte(255));
 math.equation(pointer = pointer - void(1));
-math.equation(pointer = pointer - void(1));
-math.equation(pointer = pointer - void(1));
-math.equation(pointer = pointer - void(1));
-~!comment!~MANDITORY~!uncomment!~
 math.equation(deref(pointer) = (deref(pointer) - byte(1)):binaryand:byte(255));
 };
 conditional(block.if, boolean.inequality(deref(pointer), byte(0))) { program.flow.labeledjump(defines.label.last()); };
 undefine(defines.label, defines.label.last());
 ~!comment!~MANDITORY~!uncomment!~
-math.equation(pointer = pointer + void(1));
-math.equation(deref(pointer) = (deref(pointer) + byte(1)):binaryand:byte(255));
-math.equation(deref(pointer) = (deref(pointer) + byte(1)):binaryand:byte(255));
-program.console.standardoutput.stream.writeunbufferedchars(array.create(1, conversion.changedatatype(deref(pointer), types.character, conversion.method.binary)), 0, 1);
-~!comment!~MANDITORY~!uncomment!~
-math.equation(pointer = pointer + void(1));
-math.equation(deref(pointer) = (deref(pointer) + byte(1)):binaryand:byte(255));
-program.console.standardoutput.stream.writeunbufferedchars(array.create(1, conversion.changedatatype(deref(pointer), types.character, conversion.method.binary)), 0, 1);
-~!comment!~MANDITORY~!uncomment!~
-math.equation(deref(pointer) = (deref(pointer) + byte(1)):binaryand:byte(255));
-math.equation(deref(pointer) = (deref(pointer) + byte(1)):binaryand:byte(255));
-math.equation(deref(pointer) = (deref(pointer) + byte(1)):binaryand:byte(255));
-math.equation(deref(pointer) = (deref(pointer) + byte(1)):binaryand:byte(255));
-~!comment!~MANDITORY~!uncomment!~
-math.equation(deref(pointer) = (deref(pointer) + byte(1)):binaryand:byte(255));
-math.equation(deref(pointer) = (deref(pointer) + byte(1)):binaryand:byte(255));
-math.equation(deref(pointer) = (deref(pointer) + byte(1)):binaryand:byte(255));
-program.console.standardoutput.stream.writeunbufferedchars(array.create(1, conversion.changedatatype(deref(pointer), types.character, conversion.method.binary)), 0, 1);
-~!comment!~MANDITORY~!uncomment!~
-program.console.standardoutput.stream.writeunbufferedchars(array.create(1, conversion.changedatatype(deref(pointer), types.character, conversion.method.binary)), 0, 1);
-math.equation(deref(pointer) = (deref(pointer) + byte(1)):binaryand:byte(255));
-math.equation(deref(pointer) = (deref(pointer) + byte(1)):binaryand:byte(255));
-~!comment!~MANDITORY~!uncomment!~
-math.equation(deref(pointer) = (deref(pointer) + byte(1)):binaryand:byte(255));
-program.console.standardoutput.stream.writeunbufferedchars(array.create(1, conversion.changedatatype(deref(pointer), types.character, conversion.method.binary)), 0, 1);
-math.equation(pointer = pointer + void(1));
-~!comment!~MANDITORY~!uncomment!~
-math.equation(deref(pointer) = (deref(pointer) + byte(1)):binaryand:byte(255));
-math.equation(deref(pointer) = (deref(pointer) + byte(1)):binaryand:byte(255));
-program.console.standardoutput.stream.writeunbufferedchars(array.create(1, conversion.changedatatype(deref(pointer), types.character, conversion.method.binary)), 0, 1);
-~!comment!~MANDITORY~!uncomment!~
-math.equation(pointer = pointer - void(1));
-math.equation(pointer = pointer - void(1));
-math.equation(deref(pointer) = (deref(pointer) + byte(1)):binaryand:byte(255));
-math.equation(deref(pointer) = (deref(pointer) + byte(1)):binaryand:byte(255));
-math.equation(deref(pointer) = (deref(pointer) + byte(1)):binaryand:byte(255));
-~!comment!~MANDITORY~!uncomment!~
-math.equation(deref(pointer) = (deref(pointer) + byte(1)):binaryand:byte(255));
-math.equation(deref(pointer) = (deref(pointer) + byte(1)):binaryand:byte(255));
-math.equation(deref(pointer) = (deref(pointer) + byte(1)):binaryand:byte(255));
-math.equation(deref(pointer) = (deref(pointer) + byte(1)):binaryand:byte(255));
-~!comment!~MANDITORY~!uncomment!~
-math.equation(deref(pointer) = (deref(pointer) + byte(1)):binaryand:byte(255));
-math.equation(deref(pointer) = (deref(pointer) + byte(1)):binaryand:byte(255));
-math.equation(deref(pointer) = (deref(pointer) + byte(1)):binaryand:byte(255));
-math.equation(deref(pointer) = (deref(pointer) + byte(1)):binaryand:byte(255));
-~!comment!~MANDITORY~!uncomment!~
-math.equation(deref(pointer) = (deref(pointer) + byte(1)):binaryand:byte(255));
-math.equation(deref(pointer) = (deref(pointer) + byte(1)):binaryand:byte(255));
-math.equation(deref(pointer) = (deref(pointer) + byte(1)):binaryand:byte(255));
-math.equation(deref(pointer) = (deref(pointer) + byte(1)):binaryand:byte(255));
-~!comment!~MANDITORY~!uncomment!~
-program.console.standardoutput.stream.writeunbufferedchars(array.create(1, conversion.changedatatype(deref(pointer), types.character, conversion.method.binary)), 0, 1);
-math.equation(pointer = pointer + void(1));
-program.console.standardoutput.stream.writeunbufferedchars(array.create(1, conversion.changedatatype(deref(pointer), types.character, conversion.method.binary)), 0, 1);
-~!comment!~MANDITORY~!uncomment!~
-math.equation(deref(pointer) = (deref(pointer) + byte(1)):binaryand:byte(255));
-math.equation(deref(pointer) = (deref(pointer) + byte(1)):binaryand:byte(255));
-math.equation(deref(pointer) = (deref(pointer) + byte(1)):binaryand:byte(255));
-program.console.standardoutput.stream.writeunbufferedchars(array.create(1, conversion.changedatatype(deref(pointer), types.character, conversion.method.binary)), 0, 1);
-~!comment!~MANDITORY~!uncomment!~
-math.equation(deref(pointer) = (deref(pointer) - byte(1)):binaryand:byte(255));
-math.equation(deref(pointer) = (deref(pointer) - byte(1)):binaryand:byte(255));
-math.equation(deref(pointer) = (deref(pointer) - byte(1)):binaryand:byte(255));
-math.equation(deref(pointer) = (deref(pointer) - byte(1)):binaryand:byte(255));
-~!comment!~MANDITORY~!uncomment!~
-math.equation(deref(pointer) = (deref(pointer) - byte(1)):binaryand:byte(255));
-math.equation(deref(pointer) = (deref(pointer) - byte(1)):binaryand:byte(255));
-program.console.standardoutput.stream.writeunbufferedchars(array.create(1, conversion.changedatatype(deref(pointer), types.character, conversion.method.binary)), 0, 1);
-~!comment!~MANDITORY~!uncomment!~
-math.equation(deref(pointer) = (deref(pointer) - byte(1)):binaryand:byte(255));
-math.equation(deref(pointer) = (deref(pointer) - byte(1)):binaryand:byte(255));
-math.equation(deref(pointer) = (deref(pointer) - byte(1)):binaryand:byte(255));
-math.equation(deref(pointer) = (deref(pointer) - byte(1)):binaryand:byte(255));
-~!comment!~MANDITORY~!uncomment!~
-math.equation(deref(pointer) = (deref(pointer) - byte(1)):binaryand:byte(255));
-math.equation(deref(pointer) = (deref(pointer) - byte(1)):binaryand:byte(255));
-math.equation(deref(pointer) = (deref(pointer) - byte(1)):binaryand:byte(255));
-math.equation(deref(pointer) = (deref(pointer) - byte(1)):binaryand:byte(255));
-~!comment!~MANDITORY~!uncomment!~
-program.console.standardoutput.stream.writeunbufferedchars(array.create(1, conversion.changedatatype(deref(pointer), types.character, conversion.method.binary)), 0, 1);
-math.equation(pointer = pointer + void(1));
-math.equation(deref(pointer) = (deref(pointer) + byte(1)):binaryand:byte(255));
-~!comment!~MANDITORY~!uncomment!~
-program.console.standardoutput.stream.writeunbufferedchars(array.create(1, conversion.changedatatype(deref(pointer), types.character, conversion.method.binary)), 0, 1);
 math.equation(pointer = pointer + void(1));
 program.console.standardoutput.stream.writeunbufferedchars(array.create(1, conversion.changedatatype(deref(pointer), types.character, conversion.method.binary)), 0, 1);
 program.memory.deallocate(pointer, void(math.infinity), program.memory.memorytype.bidirectional);

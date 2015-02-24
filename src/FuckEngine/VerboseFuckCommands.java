@@ -35,15 +35,9 @@ public class VerboseFuckCommands {
 	final static String MANDITORY_COMMENT = "~!comment!~MANDITORY~!uncomment!~";
 	
 	
-	
-	
-	
-	
-	/**
-	 * @param args
-	 */
+
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		System.out.println(BEGIN.length() + "   " + END.length());
 
 	}
 

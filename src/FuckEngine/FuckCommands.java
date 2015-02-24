@@ -33,4 +33,12 @@ public enum FuckCommands {
 	public String getVF(){
 		return VerboseFuckCommand;
 	}
+	
+	/**
+	 * 
+	 * @return length of command
+	 */
+	public int length(){
+		return VerboseFuckCommand.length();
+	}
 }

@@ -1,0 +1,16 @@
+~!comment!~MANDITORY~!uncomment!~
+program.initialize();
+math.equation(program.errors.handler.activated = boolean(false));
+program.console.standardinput.openstream();
+program.console.standardoutput.openstream();
+define(defines.variable, variable(pointer));
+implanttype(pointer, types.pointer(to:types.byte));
+math.equation(pointer = void(0));
+program.memory.allocate(pointer, void(math.infinity), program.memory.memorytype.bidirectional);
+~!comment!~MANDITORY~!uncomment!~
+math.equation(deref(pointer) = (deref(pointer) + byte(1)):binaryand:byte(255));
+program.memory.deallocate(pointer, void(math.infinity), program.memory.memorytype.bidirectional);
+undefine(defines.variable, variable(pointer));
+program.console.standardoutput.closestream();
+program.console.standardinput.closestream();
+program.terminate();
